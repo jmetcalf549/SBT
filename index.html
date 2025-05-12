@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fintech SBT for ACME</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f9f9f9; }
+    header { background: #002a4e; color: white; padding: 2rem; text-align: center; }
+    section { padding: 2rem; max-width: 800px; margin: auto; background: white; margin-bottom: 2rem; border-radius: 8px; }
+    h2 { color: #002a4e; }
+    .cta { background: #0071ce; color: white; padding: 1rem; text-align: center; text-decoration: none; border-radius: 4px; display: inline-block; margin-top: 1rem; }
+    input, label { display: block; margin: 0.5rem 0; width: 100%; }
+    .output { margin-top: 1rem; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Scan-Based Trading by Fintech</h1>
+    <p>Helping ACME reduce inventory risk and automate AP</p>
+  </header>
+
+  <section>
+    <h2>The Problem</h2>
+    <ul>
+      <li>Capital tied up in unsold inventory</li>
+      <li>Manual invoice/payment processes slow AP</li>
+      <li>Frequent stockouts and overstocking</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>The Solution</h2>
+    <p>Fintech’s SBT keeps supplier ownership until POS scan. You only pay for what sells — with real-time invoicing, fewer errors, and better forecasting.</p>
+  </section>
+
+  <section>
+    <h2>Customer Success</h2>
+    <blockquote>
+      “We cut out-of-stocks by 15% in just 3 months. Fintech's SBT is a retail operations dream.” – Director of Ops
+    </blockquote>
+    <blockquote>
+      “Scan-based invoicing helped us scale without hiring.” – Controller
+    </blockquote>
+  </section>
+
+  <section>
+    <h2>ROI Calculator</h2>
+    <label>Number of Stores: <input id="stores" type="number" value="10"></label>
+    <label>Inventory Cost/Store ($): <input id="cost" type="number" value="50000"></label>
+    <label>Inventory under SBT (%): <input id="pct" type="number" value="60"></label>
+    <button onclick="calcROI()">Calculate Savings</button>
+    <div class="output" id="result"></div>
+    <script>
+      function calcROI() {
+        const stores = parseFloat(document.getElementById('stores').value);
+        const cost = parseFloat(document.getElementById('cost').value);
+        const pct = parseFloat(document.getElementById('pct').value);
+        const savings = stores * cost * (pct / 100) * 0.2; // assume 20% savings
+        document.getElementById('result').innerText = `Estimated Annual Savings: $${savings.toLocaleString()}`;
+      }
+    </script>
+  </section>
+
+  <section>
+    <h2>Let’s Win Together</h2>
+    <p>We’ll help ACME go live in 1 week with full support and measurable results.</p>
+    <a class="cta" href="mailto:jack.metcalf@example.com">Contact Us to Start</a>
+  </section>
+</body>
+</html>
